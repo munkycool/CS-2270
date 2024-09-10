@@ -16,8 +16,14 @@ public class TestModel
     System.out.println("Expected 3");
 
     // Start over
-    model.reset();
+    model.simulateYear();
     System.out.println(model.getPopulation());
     System.out.println("Expected 2");
+
+    model.simulateYear();
+    System.out.println(model.getPopulation());
+
+    model.simulateYear();
+    System.out.println(model.getPopulation());
   }
 }

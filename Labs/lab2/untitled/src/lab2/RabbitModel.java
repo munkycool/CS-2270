@@ -6,19 +6,19 @@ package lab2;
  */
 public class RabbitModel
 {
-  // TODO - add instance variables as needed
-  
+
   /**
    * Constructs a new RabbitModel.
    */
 
     private int population;
+    private int lastYear = 1;
+    private int yearBeforeLast = 0;
 
   public RabbitModel()
   {
-    // TODO
 
-    population = 2;
+    population = 0;
 
   }  
  
@@ -29,7 +29,6 @@ public class RabbitModel
    */
   public int getPopulation()
   {
-    // TODO - returns a dummy value so code will compile
     return population;
   }
   
@@ -39,9 +38,11 @@ public class RabbitModel
    */
   public void simulateYear()
   {
-    // TODO
 
-    population += 1;
+    population = lastYear + yearBeforeLast;
+    yearBeforeLast = lastYear;
+    lastYear = population;
+
   }
   
   /**
@@ -50,9 +51,8 @@ public class RabbitModel
    */
   public void reset()
   {
-    // TODO
 
-    population = 2;
+    population = 0;
 
   }
 }
