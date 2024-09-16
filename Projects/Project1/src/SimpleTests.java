@@ -1,3 +1,4 @@
+
 /**
  * A few simple tests for the Printer class.
  */
