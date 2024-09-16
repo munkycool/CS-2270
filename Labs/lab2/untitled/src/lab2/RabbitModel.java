@@ -39,9 +39,10 @@ public class RabbitModel
   public void simulateYear()
   {
 
-    population = lastYear + yearBeforeLast;
     yearBeforeLast = lastYear;
     lastYear = population;
+    population = lastYear + yearBeforeLast;
+
 
   }
   
@@ -53,6 +54,9 @@ public class RabbitModel
   {
 
     population = 0;
+    lastYear = 1;
+    yearBeforeLast = 0;
+
 
   }
 }
