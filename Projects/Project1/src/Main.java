@@ -16,7 +16,15 @@
  */
 
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+    public void testPrinterWithTrayRemovalAndPaperOperations() {
+        Printer printer = new Printer(10); // Create a printer with capacity 10
+        printer.addPaper(8); // Add 8 papers
+        printer.removeTray(); // Remove the tray
+        printer.addPaper(2); // Add 2 papers
+        printer.removePaper(3); // Remove 3 papers
+
+        // Sheets available should be 7
+        System.out.println("Test 1: " + printer.getSheetsAvailable());
     }
 }

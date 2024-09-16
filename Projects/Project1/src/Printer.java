@@ -28,7 +28,6 @@ public class Printer {
     private int trayCapacity;
     private int pagesAvailable;
     private int totalPagesPrinted;
-    private boolean isTrayRemoved;
     private int nextPage = 0;
     private int documentPages;
     private int beforeTrayRemoval;
@@ -98,7 +97,6 @@ public class Printer {
     public void removeTray() {
         beforeTrayRemoval = pagesAvailable;
         pagesAvailable = 0;
-        isTrayRemoved = true;
     }
 
     /**
@@ -106,7 +104,6 @@ public class Printer {
      */
     public void replaceTray() {
         pagesAvailable = beforeTrayRemoval;
-        isTrayRemoved = false;
     }
 
     /**
@@ -124,7 +121,6 @@ public class Printer {
      * @param sheets the number of sheets to remove
      */
     public void removePaper(int sheets) {
-        isTrayRemoved = true;
         pagesAvailable = Math.max(0, pagesAvailable - sheets);
     }
 
