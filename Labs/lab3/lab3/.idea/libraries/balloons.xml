@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="balloons">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/lab3/balloons.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
